@@ -1,12 +1,10 @@
 import {useForm} from "@mantine/form";
 import {Button, Container, Group, TextInput} from "@mantine/core";
-import {registerEvent} from "./model.ts";
+import {RegisterData, registerEvent} from "./model.ts";
 
 export const RegisterPage = () => {
-  const handleSubmit = (values: typeof form.values) => {
-    registerEvent(values);
-    console.log(values);
-  };
+  const handleSubmit = (values: RegisterData) => registerEvent(values);
+
   const form = useForm({
     mode: 'uncontrolled',
     initialValues: {

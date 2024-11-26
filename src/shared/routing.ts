@@ -5,6 +5,7 @@ import {appStarted} from "./config/init.ts";
 
 export const routes = {
   search: createRoute(),
+  home: createRoute(),
   auth: {
     register: createRoute(),
     login: createRoute(),
@@ -23,6 +24,10 @@ const routesMap: UnmappedRouteObject<any>[] = [
   {
     path: '/search',
     route: routes.search
+  },
+  {
+    path: '/',
+    route: routes.home
   }
 ];
 
